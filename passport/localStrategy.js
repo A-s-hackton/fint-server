@@ -13,6 +13,7 @@ passport.use(new localStrategy({
             if(err){
                 console.log('mysql error');
                 res.statusCode = 500;
+                next(err);
             }
             if(result.length === 0){
                 console.log("none result");

@@ -1,4 +1,5 @@
 exports.isLoggedin = (req, res,next) =>{
+    console.log(req.body)
     if(req.authenticate){
         next();
     }
